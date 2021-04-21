@@ -12,6 +12,7 @@ for %%f in (.\*) do (
 	if !ext! equ exe set bool=true
 	if !ext! equ bat set bool=true
 	if !ext! equ cmd set bool=true
+	if !ext! equ com set bool=true
 	if !bool! equ true (
 		echo [33m!line:~2,100![0m
 	) else (
