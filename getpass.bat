@@ -2,11 +2,11 @@
 setlocal enabledelayedexpansion
 setlocal
 
-netsh wlan show profile > %temp%temp131416
+netsh wlan show profile > %temp%\temp131416
 echo.
 echo [91mGET YOUR WIFI PASSWORD[0m
 echo YOUR WIFI NETWORK/S:
-for /f "tokens=*" %%g in (%temp%temp131416) do (
+for /f "tokens=*" %%g in (%temp%\temp131416) do (
 	set key=%%g
 	set key=!key:~0,3!
 	if !key! equ All (
@@ -16,8 +16,8 @@ for /f "tokens=*" %%g in (%temp%temp131416) do (
 )
 echo.
 set /p var="TYPE THE WIFI NAME: "
-netsh wlan show profile "%var%" key=clear > %temp%temp131416
-for /f "tokens=*" %%g in (%temp%temp131416) do (
+netsh wlan show profile "%var%" key=clear > %temp%\temp131416
+for /f "tokens=*" %%g in (%temp%\temp131416) do (
 	set key=%%g:
 	set key=!key:~0,3!
 	if !key! equ Key (
