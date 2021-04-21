@@ -23,7 +23,7 @@ for /f "tokens=*" %%g in (%temp%\temp131416) do (
 	if !key! equ Key (
 		set password=%%g
 		echo.
-		echo PASSWORD [92m!password:~22,50![0m
+		echo PASSWORD [92m!password:~23,50![0m
 	)
 )
 echo.
@@ -32,5 +32,5 @@ echo [95mhttps://github.com/serrano1314/^![0m
 echo. 
 echo.
 pause
-del %temp%temp131416
+del %temp%\temp131416
 endlocal
