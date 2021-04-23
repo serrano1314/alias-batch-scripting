@@ -23,7 +23,7 @@ for /f "tokens=*" %%g in (%temp%\temp131416) do (
 	if !key! equ Key (
 		set password=%%g
 		echo.
-		echo PASSWORD [92m!password:~23,50![0m
+		echo PASSWORD: [92m!password:~25,50![0m
 	)
 )
 echo.
