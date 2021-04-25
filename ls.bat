@@ -7,12 +7,11 @@ setlocal enabledelayedexpansion
 for /f "tokens=*" %%f in ('DIR %~1 /A /b') do (
 	set line=%%f
 	set ext=!line:~-3,5!
-	IF EXIST %%f\NUL (
-		ECHO [46m [0m [34m%%f\[0m
+	if exist %%f\nul (
+		echo [46m [0m [34m%%f\[0m
 	) else (
 		set bool=false
 		if !ext! equ exe set bool=true
-		if !ext! equ .py set bool=true
 		if !ext! equ bat set bool=true
 		if !ext! equ cmd set bool=true
 		if !ext! equ com set bool=true
