@@ -1,9 +1,5 @@
 @echo off
 setlocal enabledelayedexpansion
-::for /f "tokens=*" %%s in ('DIR %~1 /A:D /b') do (
-::	set line=%%s
-::	echo [46m [0m [34m%%s\[0m
-::)
 for /f "tokens=*" %%f in ('DIR %~1 /A /b') do (
 	set line=%%f
 	set ext=!line:~-3,5!
