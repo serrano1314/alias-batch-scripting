@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
-set file_icon=
 for /f "tokens=*" %%f in ('DIR %~1 /A /b') do (
+	set file_icon=
 	set line=%%f
 	set ext=!line:~-3,5!
 	set ext2=!line:~-2,5!
@@ -35,6 +35,7 @@ for /f "tokens=*" %%f in ('DIR %~1 /A /b') do (
 			if !ext2! equ .c set file_icon=
 			if !ext! equ cpp set file_icon=
 			if !ext! equ pdf set file_icon=
+			if !ext! equ txt set file_icon=
 			if !ext3! equ docx set file_icon=
 			if !ext3! equ pptx set file_icon=
 			if !ext3! equ xlsx set file_icon=
