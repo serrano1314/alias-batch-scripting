@@ -14,4 +14,12 @@ if exist .git (
 )
 if exist branchtemp del %temp%\branchtemp
 title ⚡ %CurrDirName%
-prompt $E[1;30;40m$E[4;94;100m %USERNAME%$E[0;96;100m ^| $d $b$t$E[1;30;40m$_$E[1;30;40m$E[1;94;100m$E[1;0;100m %CurrPath%$h$E[1;30;47m $E[0;95;47m %CurrDirName%[34m%onGit%[92m%branch%$E[0;47;40m[0m$_$E[0;91;40m [0;97;0m
+netsh interface show interface | findstr /C:"Wi-Fi" > %temp%/tempWifiStatus
+for /f "delims=" %%I in (%temp%/tempWifiStatus) do set wifiStatus=%%I
+set wifiStatus=%wifiStatus:~15,10%
+if %wifiStatus% equ Connected ( 
+	set wifiStatus=$E[0;92;100m直
+) else ( 
+	set wifiStatus=$E[0;91;100m睊
+)
+prompt $E[1;30;40m$E[1;33;100m  %USERNAME% $E[0;0;100m %wifiStatus%$E[0;96;100m $d  $t$E[1;30;40m$h$h$h$_$E[1;30;40m$E[1;94;100m  $E[0;0;100m %CurrPath%$h$E[1;30;47m $E[0;95;47m%CurrDirName%[34m%onGit%[33m%branch%$E[0;47;40m[0m$_$E[0;91;40m [0;97;0m
