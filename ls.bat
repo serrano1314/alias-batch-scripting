@@ -40,6 +40,8 @@ for /f "tokens=*" %%f in ('DIR %~1 /A /b') do (
 			if !ext3! equ pptx set file_icon=
 			if !ext! equ ppt set file_icon=
 			if !ext3! equ xlsx set file_icon=
+			if !ext! equ zip set file_icon=
+			if !ext! equ rar set file_icon=
 			echo [97m!file_icon! !line![0m
 		)
 	)
