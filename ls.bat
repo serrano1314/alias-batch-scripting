@@ -25,6 +25,7 @@ for /f "tokens=*" %%f in ('DIR %~1 /A /b') do (
 			if !ext! equ mp3 set file_icon=
 			if !ext3! equ flac set file_icon=
 			if !ext! equ jpg set file_icon=
+			if !ext! equ png set file_icon=
 			if !ext! equ peg set file_icon=
 			if !ext! equ .js set file_icon=
 			if !ext! equ tml set file_icon=
