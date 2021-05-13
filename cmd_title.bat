@@ -22,4 +22,4 @@ if %wifiStatus% equ Connected (
 ) else ( 
 	set wifiStatus=[0;91;100m睊[0m
 )
-prompt $E[1;30;40m$E[1;33;100m  %USERNAME% $E[0;0;100m %wifiStatus%$E[0;96;100m $d  $t$E[1;30;40m$h$h$h$_$E[1;30;40m$E[1;94;100m  $E[0;0;100m %CurrPath%$h$E[1;30;47m $E[0;95;47m%CurrDirName%[34m%onGit%[32m%branch%$E[0;47;40m[0m$_$E[0;91;40m [0;97;0m
+prompt $E[1;30;40m$E[1;33;100m  %USERNAME% $E[0;0;100m %wifiStatus%$E[0;96;100m $d  $t$E[1;30;40m$h$h$h$_$E[1;30;40m$E[1;94;100m  $E[0;0;100m %CurrPath%$h$E[1;30;47m $E[0;95;47m%CurrDirName%[34m%onGit%[32m%branch%$E[0;47;40m[0m$_$E[0;91;40m[0;97;0m
