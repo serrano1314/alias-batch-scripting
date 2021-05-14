@@ -1,1 +1,1 @@
-@explorer . 
+@explorer %* . 
