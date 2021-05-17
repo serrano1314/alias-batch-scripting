@@ -5,7 +5,7 @@ for %%I in (.) do (
 	set CurrDirName= %%~nxI
 )
 if exist .git (
-	set onGit= $h
+	set onGit= $h 
 	@git rev-parse --abbrev-ref HEAD> %temp%\branchtemp
 	for /f "delims=" %%i in (%temp%\branchtemp) do set branch= %%i
 ) else (
