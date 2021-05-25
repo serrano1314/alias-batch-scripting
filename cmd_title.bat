@@ -5,18 +5,21 @@ for %%I in (.) do (
 	set CurrDirName= %%~nxI
 )
 if exist .git (
-	set onGit= $h[34m 
-	git status -s>status
+	set onGit= [34m 
+	git status -s> %temp%\gitstatus
 	@git rev-parse --abbrev-ref HEAD> %temp%\branchtemp
 	for /f "delims=" %%i in (%temp%\branchtemp) do set branch= %%i
-	for /f %%i in (status) do set status=%%i
-	if "%status%" == "" set onGit= $h[31m 
+	for /f "tokens=*" %%g in (%temp%\gitstatus) do set status=%%g
+	
 ) else (
 	set onGit=
 	set branch=
-	set gitStatus=
+	set status=
 )
 ::if exist branchtemp del %temp%\branchtemp
+if "%status%" neq "" ( 
+		set onGit= [31m 
+)
 title ⚡ %CurrDirName%
 netsh interface show interface | findstr /C:"Wi-Fi" > %temp%/tempWifiStatus
 for /f "delims=" %%I in (%temp%/tempWifiStatus) do set wifiStatus=%%I
