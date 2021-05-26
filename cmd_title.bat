@@ -5,12 +5,7 @@ for %%I in (.) do (
 	set CurrDirName= %%~nxI
 )
 set onGit= [34m 
-
-IF EXIST .git set isgit=true
-IF EXIST ..\.git set isgit=true
-IF EXIST ..\..\.git set isgit=true
-
-if %isgit% equ true (
+if exist .git (
 	git status -s> %temp%\gitstatus
 	@git rev-parse --abbrev-ref HEAD> %temp%\branchtemp
 	for /f "delims=" %%i in (%temp%\branchtemp) do set branch= %%i
