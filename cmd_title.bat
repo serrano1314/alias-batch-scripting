@@ -6,8 +6,11 @@ for %%I in (.) do (
 )
 set onGit= [34m 
 
+set isgit=
 IF EXIST .git set isgit=true
-IF EXIST ..\.git set isgit=true
+IF EXIST ..\..\.git set isgit=true
+IF EXIST ..\..\..\.git set isgit=true
+IF EXIST ..\..\..\..\.git set isgit=true
 
 if "%isgit%" equ "true" (
 	git status -s> %temp%\gitstatus
@@ -19,6 +22,7 @@ if "%isgit%" equ "true" (
 	set onGit=
 	set branch=
 	set status=
+	set isgit=
 )
 ::if exist branchtemp del %temp%\branchtemp
 if "%status%" neq "" ( 
