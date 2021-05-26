@@ -8,6 +8,7 @@ set onGit= [34m
 
 set isgit=
 IF EXIST .git set isgit=true
+IF EXIST ..\.git set isgit=true
 IF EXIST ..\..\.git set isgit=true
 IF EXIST ..\..\..\.git set isgit=true
 IF EXIST ..\..\..\..\.git set isgit=true
