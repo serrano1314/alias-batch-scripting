@@ -31,6 +31,6 @@ echo follow me at:
 echo [95mhttps://github.com/serrano1314/^![0m
 echo. 
 echo.
-pause
 del %temp%\temp131416
+pause
 endlocal
