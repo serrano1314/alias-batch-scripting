@@ -5,4 +5,5 @@ open regedit goto Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Process
 create an "autorun" string value with value data of "chcp 65001 > nul && C:\alias-batch-scripting\cmd.bat" or where is the path of these files
 
 install anonymice nerd font and set it for the cmd terminal font
+
 also install git to your device
