@@ -27,7 +27,7 @@ if "%isgit%" equ "true" (
 	set isgit=
 )
 ::if exist branchtemp del %temp%\branchtemp
-if "%status:~0:2%" neq "" ( 
+if "%status%" neq "" ( 
 	set onGit= [31m 
 	set status=
 )
