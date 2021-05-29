@@ -7,6 +7,7 @@ for %%I in (.) do (
 set onGit= [34m 
 
 set isgit=
+set status=
 IF EXIST .git set isgit=true
 IF EXIST ..\.git set isgit=true
 IF EXIST ..\..\.git set isgit=true
