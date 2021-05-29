@@ -18,7 +18,7 @@ if "%isgit%" equ "true" (
 	git status -s> %temp%\gitstatus
 	@git rev-parse --abbrev-ref HEAD> %temp%\branchtemp
 	for /f "delims=" %%i in (%temp%\branchtemp) do set branch= %%i
-	for /f "tokens=*" %%g in (%temp%\gitstatus) do set status=%%g
+	for /f "tokens=1" %%g in (%temp%\gitstatus) do set status=%%g
 	
 ) else (
 	set onGit=
