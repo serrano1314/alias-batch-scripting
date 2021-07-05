@@ -1,3 +1,3 @@
 @echo off
-set /a p=%*
+set /a n=%*
 echo [92m%p% [0m
