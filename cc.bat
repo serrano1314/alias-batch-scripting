@@ -1,9 +1,8 @@
 @echo off
-echo Calculator
-echo x = exit
-echo c = clear
+echo [92mCalculator
+echo [91mx = exit  [93mc = clear [0m
 :loop
-set /p res=
+set /p res= 
 if %res% equ x goto end
 if %res% equ c (
 	cls
@@ -13,9 +12,9 @@ if %res% equ c (
 >"%temp%\VBS.vbs" echo Set fso = CreateObject("Scripting.FileSystemObject") : Wscript.echo (%res%)
 for /f "delims=" %%a in ('cscript /nologo "%temp%\VBS.vbs"') do set "res=%%a"
 del "%temp%\VBS.vbs"
-echo [92m%res% [0m
+echo = [92m%res% [0m
 
 goto loop
 :end
 echo QUICK_CALC by stvnsrrn
-echo [91mhttps://www.github.com/serrano1314
+echo [93mhttps://www.github.com/serrano1314
