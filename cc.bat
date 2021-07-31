@@ -1,8 +1,8 @@
 @echo off
-title Quick_CMD_Calculator
 echo [92mCalculator
 echo [91mx - exit  [93mc - clear [0m
 :loop
+title Quick_CMD_Calculator
 set /p res= 
 if %res% equ x goto end
 if %res% equ c (
