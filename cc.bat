@@ -19,4 +19,3 @@ goto loop
 :end
 echo QUICK_CALC by stvnsrrn
 echo [93mhttps://www.github.com/serrano1314
-cmd
