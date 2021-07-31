@@ -1,4 +1,5 @@
 @echo off
+title Quick_CMD_Calculator
 echo [92mCalculator
 echo [91mx - exit  [93mc - clear [0m
 :loop
@@ -18,3 +19,4 @@ goto loop
 :end
 echo QUICK_CALC by stvnsrrn
 echo [93mhttps://www.github.com/serrano1314
+cmd
