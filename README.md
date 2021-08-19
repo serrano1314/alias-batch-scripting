@@ -4,6 +4,9 @@ if you want to use these batch file command you need to set the path env whereve
 open regedit goto Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor
 create an "autorun" string value with value data of "chcp 65001 > nul && C:\alias-batch-scripting\cmd.bat" or where is the path of these files
 
+prerequisite:
 install anonymice nerd font and set it for the cmd terminal font
+install droidsanmono font for icons
+set to utf-8 your cmd terminal
 
 also install git to your device
