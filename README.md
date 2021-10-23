@@ -12,3 +12,8 @@ You can get the fonts here:<b> https://www.nerdfonts.com/font-downloads </b></br
 set to utf-8 your cmd terminal<br/>
 also install git to your device<br/>
 
+Sample for Desktop Version (will update soon):</br>
+![image](https://user-images.githubusercontent.com/5716545/138541945-fbba7df4-2a08-4535-bfa3-f6cde2638ec9.png)</br>
+![image](https://user-images.githubusercontent.com/5716545/138541955-b16fc3ff-83a5-476b-ad08-f8e67fc535f1.png)
+
+
