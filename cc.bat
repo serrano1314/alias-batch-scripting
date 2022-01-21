@@ -13,7 +13,7 @@ if %res% equ c (
 >"%temp%\VBS.vbs" echo Set fso = CreateObject("Scripting.FileSystemObject") : Wscript.echo (%res%)
 for /f "delims=" %%a in ('cscript /nologo "%temp%\VBS.vbs"') do set "res=%%a"
 del "%temp%\VBS.vbs"
-echo = [92m%res% [0m
+echo = %res%
 
 goto loop
 :end
