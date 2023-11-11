@@ -2,12 +2,18 @@
 
 set isgit=
 set Myvar=
+set fromParentCount=
 SET /a count=20
+@REM up to {count} folder from parent folder where the .git folder is.
+@REM after {count} the git status will not show 
+@REM increase count variable if needed
+
 setlocal enabledelayedexpansion
 for /l %%a in (0,1,%count%) do (
 	
 	if EXIST !Myvar!.git (
 		endlocal
+		set fromParentCount=%%a
 		set isgit=true
 		goto :break
 	) 
@@ -15,7 +21,6 @@ for /l %%a in (0,1,%count%) do (
 )
 endlocal
 :break
-
 for %%I in (.) do (
 	set CurrPath=%%~dpI
 	set CurrDirName= %%~nxI
