@@ -1,23 +1,28 @@
-::must have any nerd font
 @echo off
+
+set isgit=
+set Myvar=
+SET /a count=20
+setlocal enabledelayedexpansion
+for /l %%a in (0,1,%count%) do (
+	
+	if EXIST !Myvar!.git (
+		endlocal
+		set isgit=true
+		goto :break
+	) 
+	call set "Myvar=%%Myvar%%..\" 
+)
+endlocal
+:break
+
 for %%I in (.) do (
 	set CurrPath=%%~dpI
 	set CurrDirName= %%~nxI
 )
-set onGit= [34m 
 
-set isgit=
+set onGit= [34m 
 set status=
-IF EXIST .git set isgit=true
-IF EXIST ..\.git set isgit=true
-IF EXIST ..\..\.git set isgit=true
-IF EXIST ..\..\..\.git set isgit=true
-IF EXIST ..\..\..\..\.git set isgit=true
-IF EXIST ..\..\..\..\..\.git set isgit=true
-IF EXIST ..\..\..\..\..\..\.git set isgit=true
-IF EXIST ..\..\..\..\..\..\..\.git set isgit=true
-IF EXIST ..\..\..\..\..\..\..\..\.git set isgit=true
-IF EXIST ..\..\..\..\..\..\..\..\..\.git set isgit=true
 
 if "%isgit%" equ "true" (
 	git status -s> %temp%\gitstatus
