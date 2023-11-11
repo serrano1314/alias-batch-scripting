@@ -13,6 +13,11 @@ IF EXIST ..\.git set isgit=true
 IF EXIST ..\..\.git set isgit=true
 IF EXIST ..\..\..\.git set isgit=true
 IF EXIST ..\..\..\..\.git set isgit=true
+IF EXIST ..\..\..\..\..\.git set isgit=true
+IF EXIST ..\..\..\..\..\..\.git set isgit=true
+IF EXIST ..\..\..\..\..\..\..\.git set isgit=true
+IF EXIST ..\..\..\..\..\..\..\..\.git set isgit=true
+IF EXIST ..\..\..\..\..\..\..\..\..\.git set isgit=true
 
 if "%isgit%" equ "true" (
 	git status -s> %temp%\gitstatus
@@ -33,4 +38,4 @@ if "%status%" neq "" (
 )
 title %CurrDirName%
 
-prompt $E[1;33;44m  %USERNAME% $E[0;34;40m$E[1;30;40m%wifiStatus%$E[0;96;100m $d  $t$E[1;30;40m$h$h$h$_$E[1;30;40m$E[1;94;100m  $E[0;0;100m %CurrPath%$h$E[1;30;47m $E[0;95;47m%CurrDirName%%onGit%[32m%branch%$E[0;47;40m[0m$_$E[0;91;40m[0;97;0m
+prompt $E[1;33;44m  %USERNAME% $E[0;34;40m$E[1;30;40m%wifiStatus%$E[0;96;100m $d  $t$E[1;30;40m$h$h$h$_$E[1;30;40m$E[1;94;100m  $E[0;0;100m %CurrPath%$h$E[1;30;47m $E[0;95;47m%CurrDirName%%onGit%[32m%branch%$E[0;47;40m[0m$_$E[0;91;40m [0;97;0m
