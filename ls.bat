@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 for /f "tokens=*" %%f in ('DIR %~1 /A /b') do (
-	set file_icon=
+	set file_icon=
 	set line=%%f
 	set ext=!line:~-3,5!
 	set ext2=!line:~-2,5!
@@ -10,7 +10,7 @@ for /f "tokens=*" %%f in ('DIR %~1 /A /b') do (
 		if exist %%f\.git (
 			echo [94m %%f\[0m
 		) else (
-			echo [94m %%f\[0m
+			echo [94m %%f\[0m
 		)
 	) else (
 		set boolx=false
@@ -21,9 +21,9 @@ for /f "tokens=*" %%f in ('DIR %~1 /A /b') do (
 		if !boolx! equ true (
 			echo [33m !line![0m
 		) else (
-			if !ext! equ mp4 set file_icon=
-			if !ext! equ mp3 set file_icon=
-			if !ext3! equ flac set file_icon=
+			if !ext! equ mp4 set file_icon=
+			if !ext! equ mp3 set file_icon=
+			if !ext3! equ flac set file_icon=
 			if !ext! equ jpg set file_icon=
 			if !ext! equ png set file_icon=
 			if !ext! equ peg set file_icon=
@@ -43,6 +43,8 @@ for /f "tokens=*" %%f in ('DIR %~1 /A /b') do (
 			if !ext3! equ xlsx set file_icon=
 			if !ext! equ zip set file_icon=
 			if !ext! equ rar set file_icon=
+			if !ext! equ sql set file_icon=
+			if !ext3! equ java set file_icon=
 			echo [97m!file_icon! !line![0m
 		)
 	)
